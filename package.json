@@ -1,0 +1,15 @@
+{
+  "name": "scss-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open"
+  },
+  "devDependencies": {
+    "sass": "^1.84.0",
+    "vite": "^6.1.0"
+  }
+}

@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use 'colors' as *;
+
+// $keys looks better, because colors object
+// can have more nestings than 2
+@function clr($keys...) {
+  @if map.has-key($colors, $keys...) {
+    @return map.get($colors, $keys...);
+  } @else {
+    @error '$colors does not have that color!';
+  }
+}
+// @function clr($color, $shade) {
+//   @if map.has-key($colors, $color, $shade) {
+//     @return map.get($colors, $color, $shade);
+//   } @else {
+//     @error '$colors does not have that color!';
+//   }
+// }
