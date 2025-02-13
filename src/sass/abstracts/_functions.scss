@@ -1,8 +1,16 @@
 @use 'sass:map';
+@use 'sass:math';
 @use 'colors' as *;
+@use 'typography' as *;
 
-// $keys looks better, because colors object
-// can have more nestings than 2
+@function pxToRem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function pxToEm($px, $base: 16) {
+  @return math.div($px, $base) * 1em;
+}
+
 @function clr($keys...) {
   @if map.has-key($colors, $keys...) {
     @return map.get($colors, $keys...);
@@ -10,13 +18,6 @@
     @error '$colors does not have that color!';
   }
 }
-// @function clr($color, $shade) {
-//   @if map.has-key($colors, $color, $shade) {
-//     @return map.get($colors, $color, $shade);
-//   } @else {
-//     @error '$colors does not have that color!';
-//   }
-// }
 
 @function fs($size) {
   @if map.has-key($font-sizes, $size) {

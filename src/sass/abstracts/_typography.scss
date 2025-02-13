@@ -1,4 +1,10 @@
+// @use 'functions' as *;
+
 $ff-sans: 'Open Sans', sans-serif;
+$ff-serif: 'Abril Fatface', serif;
+
+$ff-base: $ff-sans;
+$ff-accent: $ff-serif;
 
 $font-sizes: (
   300: 1rem,
@@ -12,6 +18,8 @@ $font-sizes: (
   // 48px
   900: 3.75rem,
   // 60px
+  999: pxToRem(80) // И тут я хочу использовать функцию, чтобы
+  // не высчитывать ремы сторонние калькуляторы,,
 );
 
 $fw-400: 400;
