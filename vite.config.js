@@ -4,7 +4,7 @@ import htmlPurge from 'vite-plugin-purgecss';
 
 export default defineConfig({
   root: resolve(__dirname, 'src'),
-  plugins: [htmlPurge],
+  plugins: [htmlPurge()],
   build: {
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
