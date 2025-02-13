@@ -1,8 +1,16 @@
 @use '../abstracts/' as *;
 @use 'sass:map';
+
+// color map wont work
 body {
-  margin: 0;
+  font-family: $ff-sans;
+  font-size: fs(400);
+  font-weight: $fw-400;
+  color: clr(neutral, 900);
+  background-color: clr(neutral, 100);
+  text-align: center;
 }
+
 h1 {
   // color: map.get($colors, primary, dark);
   color: clr(primary, dark);
@@ -18,4 +26,5 @@ img {
   margin: 0 auto;
   height: 300px;
   border: 3px solid $main;
+  border-radius: 30px;
 }

@@ -1,0 +1,17 @@
+/* "Resets margin reset
+**
+** Adds margin top to not first child
+** default is 1rem, but can be changed
+** with custom properties, for example
+** by using data-attr or BEM modifier
+** class such as flow--small
+** Class gets put on a parent container
+*/
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+// .flow[data-spacing="small"] {
+//   --flow-spacer: .25rem;
+// }

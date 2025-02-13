@@ -1,11 +1,23 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 * {
   margin: 0;
   padding: 0;
   font: inherit;
+}
+
+img {
+  display: block; /* Устраняет лишнее пространство */
+  // max-width: 100%; /* Ограничивает ширину изображения */
+  // height: auto; /* Сохраняет пропорции */
+  // object-fit: cover; /* Заполняет контейнер без искажений */
 }
